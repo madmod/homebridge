@@ -284,7 +284,7 @@ LogitechHarmonyAccessory.prototype = {
             onUpdate: function (value) {
               self.setPowerState(value)
             },
-            onRead: self.getPowerState,
+            onRead: self.getPowerState.bind(self),
             perms: ["pw","pr","ev"],
             format: "bool",
             initialValue: 0,
